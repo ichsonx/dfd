@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 var keywords string    // 要删除文件所包含的字符串
@@ -37,6 +38,7 @@ var rootCmd = &cobra.Command{
 		} else {
 			loopDelDir()
 		}
+		time.Sleep(30 * time.Second)
 	},
 }
 
